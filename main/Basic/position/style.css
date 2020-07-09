@@ -1,0 +1,115 @@
+.section > ul > li {
+  margin-left: 5%;
+}
+.section .example {
+  margin: 3rem 0;
+  width: 100%;
+  height: 60vh;
+  background: #636e72;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.example p {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+.example .box {
+  color: white;
+  position: absolute;
+  width: 150px;
+  background: #00cec9;
+}
+.top-left {
+  top: 0;
+  left: 0;
+}
+.top-right {
+  top: 0;
+  right: 0;
+}
+.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+.bottom-right {
+  bottom: 0;
+  right: 0;
+}
+.section > ul > ul > li {
+  list-style: square;
+  margin-left: 10%;
+}
+#main .title-image p {
+  z-index: 1;
+  color: white;
+}
+#position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+#position p {
+  font-size: 6rem;
+  color: white;
+  border-bottom: 5px dashed;
+}
+#position p:nth-child(1) {
+  transform: translateX(-40%);
+  text-transform: capitalize;
+}
+#position p:nth-child(3) {
+  transform: translateX(40%);
+  text-transform: capitalize;
+}
+#main::after {
+  background: #0984e3;
+}
+.example2 .container-ex {
+  width: 60%;
+  height: 60%;
+  background: black;
+}
+.example2 .item {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  background: red;
+}
+.example3 .container-ex {
+  width: 60%;
+  height: 60%;
+  background: black;
+}
+.example3 .item {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  background: red;
+  bottom: 0;
+  left: 0;
+}
+.example4 .box {
+  width: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.5rem 2rem;
+}
+.example4 .box.origin {
+  padding: 2rem 3.5rem;
+}
+.example4 .box.top {
+  top: 30%;
+}
+.example4 .box.bottom {
+  top: 70%;
+}
+.example4 .box.left {
+  left: 25%;
+}
+.example4 .box.right {
+  left: 75%;
+}

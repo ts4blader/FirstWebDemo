@@ -1,0 +1,66 @@
+#main::after {
+  background: #22a6b3;
+}
+.example .container-ex {
+  color: white;
+  background: #2d3436;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+}
+.example .container-ex .item {
+  width: 150px;
+  height: 120px;
+  text-align: center;
+}
+.example .container-ex .item1 {
+  background: green;
+}
+.example .container-ex .item2 {
+  background: lightblue;
+}
+.example .container-ex .item3 {
+  background: teal;
+}
+.example2 .container-ex .item {
+  flex-grow: 1;
+}
+.example3 .container-ex .item {
+  width: auto;
+  flex-grow: 1;
+}
+.example3 .container-ex .item1 {
+  flex-grow: 2;
+}
+.example4 .container-ex .item {
+  width: auto;
+}
+.example4 .container-ex .item1 {
+  flex-grow: 4;
+}
+.example4 .container-ex .item2 {
+  flex-grow: 2;
+}
+.example4 .container-ex .item3 {
+  flex-grow: 5;
+}
+.have-text .container-ex + p {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.example5 .container-ex {
+  width: 50%;
+}
+.example5 .container-ex .item2 {
+  flex-shrink: 0;
+}
+@media screen and (max-width: 768px) {
+  .bg .caption h2 {
+    font-size: 8vw;
+  }
+}

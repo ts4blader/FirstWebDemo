@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/prototype/blog/style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="/JQuery/jquery-3.4.1.min.js"></script>
+    <script src="/prototype/blog/app.js"></script>
+    <title>CSS Position</title>
+  </head>
+  <body>
+    <div class="loader-container" id="loader">
+      <div class="loader">
+        <h3>Loading...</h3>
+      </div>
+    </div>
+    <a id="top-btn" class="top-btn-box" href="#" title="top">
+      <div class="top-btn">></div>
+    </a>
+
+    <div id="menu" class="menu">
+      <div class="icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="list">
+        <ul>
+          <li><a href="#">Listed 1</a></li>
+          <li><a href="#">Listed 2</a></li>
+          <li><a href="#">Listed 3</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <header>
+      <div class="logo-box">
+        <div class="logo" id="logo">Visual Animation</div>
+      </div>
+      <ul class="nav-box">
+        <li><a href="/index.html" id="home">Home</a></li>
+        <li>
+          <a href="/main/Basic/index.html" id="basic" class="active">Basic</a>
+        </li>
+        <li><a href="/main/Design/index.html" id="design">Design</a></li>
+        <li><a href="/main/Advanced/index.html" id="advanced">Advanced</a></li>
+      </ul>
+    </header>
+
+    <div class="bg" id="bg">
+      <div class="caption">
+        <img src="/icon/codepen.png" alt=":((" />
+        <h2>Position trong CSS</h2>
+      </div>
+    </div>
+
+    <div id="main" class="main-container">
+      <div class="caption">
+        <h3>Position trong CSS</h3>
+      </div>
+
+      <ul class="list">
+        <h4>Nội dung</h4>
+        <li><a href="#cap1">Cap1</a></li>
+        <li><a href="#cap2">Cap2</a></li>
+        <li><a href="#cap3">Cap3</a></li>
+      </ul>
+
+      <div class="content">
+        <div class="section">
+          <h4 class="caption">Mở đầu</h4>
+          <p>
+            Chắc hẳn khi các bạn layout trang web hay tạo một menu thì việc sử
+            dụng thuộc tính <em>position</em> hẳn đã không còn xa lạ gì với
+            chúng ta.
+          </p>
+          <p>
+            Hôm nay chúng ta cùng tìm hiểu thuộc tính <em>Postion</em> hoạt động
+            như thế nào nha.
+          </p>
+          <h4 class="caption">Giá trị của Postion</h4>
+          <p>
+            Thuộc tính này chỉ có vài giá trị cũng khá là dễ nhớ:
+          </p>
+          <ul>
+            <li>
+              <p>
+                <strong>relative</strong>: Giá trị này thiết lập vị trí của phần
+                tử mà không gây ảnh hưởng đến các phần tử khác.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>absolute</strong>: Giá trị này thiết lập vị trí của phần
+                tử dựa vào phần tử cha của nó nếu cha của nó đã định position
+                <em>relative</em> hoặc <em>absolute</em>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>fixed</strong>: Giá trị này thiết lập vị trí của phần tử
+                cố định trên màn hình dù bạn có scroll trình duyệt.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>sticky</strong>: Giá trị này tương ứng với
+                <em>fixed</em>
+                khi bạn scroll qua chính nó.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>static</strong>: Đây là giá trị mặc định của
+                <em>position</em>.
+              </p>
+            </li>
+          </ul>
+          <p>Những thuộc tính đi chung với <em>Position</em>:</p>
+          <ul>
+            <li>
+              <p>
+                <strong>top</strong>: Căn chỉnh tử phần tử từ trên xuống dưới
+                nếu giá trị > 0 còn < 0 thì phần tử sẽ đi ngược lại.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>bottom</strong>: Căn chỉnh tử phần tử từ dưới lên trên
+                nếu giá trị > 0 còn < 0 thì phần tử sẽ đi ngược lại.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>left</strong>: Căn chỉnh tử phần tử từ trái sang phải
+                nếu giá trị > 0 còn < 0 thì phần tử sẽ đi ngược lại.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>right</strong>: Căn chỉnh tử phần tử từ phải qua trái
+                nếu giá trị > 0 còn < 0 thì phần tử sẽ đi ngược lại.
+              </p>
+            </li>
+          </ul>
+          <p>
+            Khá là khó hiểu nhỉ. Đừng lo, coi xong ví dụ các bạn sẽ hiểu ngay.
+          </p>
+          <h4 class="caption">Giải thích giá trị trong Position</h4>
+          <p>
+            Đầu tiên, mình sẽ giải thích bốn thuộc tính <em>top</em>,
+            <em>bottom</em>, <em>left</em>, <em>right</em>.
+          </p>
+          <ul>
+            <li>
+              <em>Position: absolute;</em>
+            </li>
+            <div class="example example1">
+              <div class="top-left box">
+                <p>top: 0</p>
+                <p>left: 0</p>
+              </div>
+              <div class="top-right box">
+                <p>top: 0</p>
+                <p>right: 0</p>
+              </div>
+              <div class="bottom-left box">
+                <p>bottom: 0</p>
+                <p>left: 0</p>
+              </div>
+              <div class="bottom-right box">
+                <p>bottom: 0</p>
+                <p>right: 0</p>
+              </div>
+            </div>
+            <ul>
+              <li>
+                <p>
+                  <em>top: 0, left: 0</em> Phần tử sẽ nằm ở bên trên trái cùng.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>top: 0, right: 0</em> Phần tử sẽ nằm ở bên trên phải cùng.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>bottom: 0, left: 0</em> Phần tử sẽ nằm ở bên dưới trái
+                  cùng.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>bottom: 0, right: 0</em> Phần tử sẽ nằm ở bên dưới phải
+                  cùng.
+                </p>
+              </li>
+            </ul>
+            <li>
+              <em>Position: relative;</em>
+            </li>
+            <div class="example">
+              <div class="box origin">origin</div>
+              <div class="box top">top: 100px</div>
+              <div class="box left">left: 100px</div>
+              <div class="box right">right: 100px</div>
+              <div class="box bottom">bottom: 100px</div>
+            </div>
+            <ul>
+              <li>
+                <p>
+                  <em>top: 100px</em> Phần tử sẽ cách phần tử
+                  <strong>origin</strong>
+                  100px về phía bên trên.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>bottom: 100px</em> Phần tử sẽ cách phần tử
+                  <strong>origin</strong>
+                  100px về phía bên dưới.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>left: 100px</em> Phần tử sẽ cách phần tử
+                  <strong>origin</strong>
+                  100px về phía bên trái.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <em>right: 100px</em> Phần tử sẽ cách phần tử
+                  <strong>origin</strong>
+                  100px về phía bên phải.
+                </p>
+              </li>
+            </ul>
+            <li>
+              <em>Postion: fixed;</em>
+            </li>
+            <p>
+              Phần này thì các bạn thấy thanh điều hướng và top button trên
+              trang của mình là hiểu ngay.
+            </p>
+          </ul>
+
+          <div class="img">
+            <img src="#" alt="sorry this image is missed :((" />
+            <p class="img-caption">Img Caption</p>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            unde harum, labore dignissimos voluptates obcaecati corporis
+            similique veritatis ipsum! Adipisci nisi distinctio deserunt ad
+            nihil, ducimus a facere quis dolor.
+          </p>
+          <div class="textbox">
+            <pre>
+.example{
+  width : 100%;  
+  height : 100%;
+}</pre
+            >
+          </div>
+          <p class="end">-----The End-----</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="content">
+        <p>@Copyright VisualAnimation</p>
+        <div>
+          Icons by
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+        </div>
+        <div>
+          Background vector created by starline -
+          <a href="https://www.freepik.com/free-photos-vectors/background"
+            >www.freepik.com</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

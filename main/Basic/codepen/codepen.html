@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/prototype/CSS/template.css" />
+    <link rel="stylesheet" href="/prototype/CSS/blog.css" />
+    <link rel="stylesheet" href="/prototype/responsive/responsive.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="/JQuery/jquery-3.4.1.min.js"></script>
+    <script src="/prototype/JS/template.js"></script>
+    <title>Giới Thiệu - Codepen - VS Code</title>
+  </head>
+  <body>
+    <!-- loader -->
+    <div class="loader-container" id="loader">
+      <div class="loader">
+        <h3>Loading...</h3>
+      </div>
+    </div>
+    <!-- float button -->
+    <a id="top-btn" class="top-btn-box" href="#" title="top">
+      <div class="top-btn">></div>
+    </a>
+
+    <a class="menu-btn" href="#menu" title="Mục Lục">
+      <img src="/icon/menu.png" alt=":((" />
+    </a>
+    <!-- header -->
+    <div class="overlay-menu" id="overlay-menu">
+      <img src="/icon/menu.png" alt=":((" class="close-btn" id="close-btn" />
+      <ul class="nav-in-btn">
+        <li><a href="/index.html" id="home-menu">Home</a></li>
+        <li>
+          <a href="/main/Basic/index.html" id="basic-menu" class="active"
+            >Basic</a
+          >
+        </li>
+        <li>
+          <a href="/main/Advanced/index.html" id="advanced-menu">Advanced</a>
+        </li>
+        <li>
+          <a href="/main/About us/index.html" id="about-menu">About Us</a>
+        </li>
+      </ul>
+    </div>
+
+    <header>
+      <div class="logo-box">
+        <div class="logo" id="logo">Visual Animation</div>
+      </div>
+      <ul class="nav-box">
+        <li><a href="/index.html" id="home">Home</a></li>
+        <li>
+          <a href="/main/Basic/index.html" id="Basic" class="active">Basic</a>
+        </li>
+        <li><a href="/main/Advanced/index.html" id="advanced">Advanced</a></li>
+        <li><a href="/main/About us/index.html" id="about-us">About Us</a></li>
+      </ul>
+      <img src="/icon/menu-black.png" alt=":((" id="open-btn" />
+    </header>
+    <!-- main background -->
+    <div class="bg" id="bg">
+      <div class="caption">
+        <h2>Giới Thiệu</h2>
+      </div>
+    </div>
+    <!-- document background -->
+    <div id="main" class="main-container">
+      <div class="title-image">
+        <img src="/icon/codepen.png" alt=":((" />
+      </div>
+      <!-- document category -->
+      <ul class="list" id="menu">
+        <h4>Nội dung</h4>
+        <li><a href="#cap1">Mở Đầu</a></li>
+        <li><a href="#cap2">Animation Cơ Bản</a></li>
+        <li><a href="#cap3">Codepen</a></li>
+        <li><a href="#cap4">VS Code</a></li>
+        <li><a href="#cap5">Emmet</a></li>
+        <li><a href="#cap6">Kết</a></li>
+      </ul>
+      <!-- content -->
+      <div class="content">
+        <div class="section">
+          <h4 class="caption" id="cap1">Mở Đầu</h4>
+          <p>
+            Xin chào cả nhà, nếu các bạn đã ở đây thì chắc hẳn ai cũng biết cơ
+            bản về HTML và CSS rồi nhỉ? Nhưng các bạn đã biết cách làm thế nào
+            để website của mình nhìn thêm bát mắt và phong phú chưa? Đúng chúng
+            ta cần một vài <b>Animation</b> nho nhỏ đó.
+          </p>
+          <h4 class="caption" id="cap2">Animation cơ bản</h4>
+          <p>
+            Thật ra <em>Animation</em> chỉ là 1 phần của <em>JS</em> vì vậy khi
+            mới tiếp cận với Animation thì sẽ khá khó khăn, may thay CSS3 đã hỗ
+            trợ về <em>Animation</em> khá tốt để chúng ta tiếp cận một cách dễ
+            dàng hơn.
+          </p>
+          <div class="img">
+            <img src="/icon/css3.png" alt="sorry this image is missed :((" />
+          </div>
+          <p>
+            Để tiếp cận <em>Animation</em> dễ dàng hơn thì mình xin giới thiệu
+            một vài Tools nhé!
+          </p>
+          <h4 class="caption" id="cap3">Codepen</h4>
+          <p>
+            <a href="https://codepen.io/">Codepen</a> là một trang code web trực
+            tuyến nha các bạn. Hình minh họa codepen:
+          </p>
+          <div class="img">
+            <img id="demo-codepen" src="/image/codepen-demo.png" alt=":((" />
+          </div>
+          <p>
+            Các bạn nhìn là hiểu ngay chúng ta có 3 ô code đó là
+            <em>HTML, CSS và JS</em> và một ô Preview là ô chiếm diện tích lớn
+            nhất trên màn hình cũng chính là phần mình thích nhất ở codepen. Các
+            bạn chỉ cần code ở 3 ô kia thì sản phẩm của mình sẽ hiển thị ngay
+            bên ô Preview.
+          </p>
+          <p>
+            Hơn nữa codepen còn hỗ trợ <em>Emmet</em> và
+            <em>các ngôn ngữ tiền xử lý</em> khá tốt. Emmet là gì mình sẽ nói
+            sau.
+          </p>
+          <p>
+            Theo mình Codepen là công cụ hỗ trợ code web mạnh nhất nếu bạn học
+            trực tuyến.
+          </p>
+          <h4 class="caption" id="cap4">VS Code</h4>
+          <p>
+            Khác với <em>Codepen</em>, <em>VS Code</em> là một phần mềm
+            <strong>Text Editor</strong>
+            nó có khả năng code rất nhiều ngôn ngữ không riêng gì code Web
+          </p>
+          <div class="img">
+            <img src="/image/vs-code.png" alt=":((" />
+          </div>
+          <p>
+            Với sự hỗ trợ mạnh mẽ từ khả năng <strong>Autocomplete</strong> và
+            <strong>Emmet</strong> các bạn sẽ thấy <em>VS Code</em> hỗ trợ bạn
+            code nhanh như thế nào
+          </p>
+          <p>
+            <em>VS Code</em> có thể code cả một Project mà bạn khó có thể làm
+            thế trên <em>Codepen</em>. Hơn nữa <em>VS Code</em> còn có các
+            Extensions rất thú vị:
+          </p>
+          <ul id="extensions">
+            <li>Live Server</li>
+            <li>Auto Rename Tag</li>
+            <li>CSS Peek</li>
+            <li>Prettier</li>
+            <li>Emmet</li>
+          </ul>
+          <h4 class="caption" id="cap5">Emmet</h4>
+          <p>
+            Chắc các bạn đang thắc mắc <em>Emmet</em> là gì mà được hỗ trợ nhiều
+            như vậy sau đây mình sẽ cho các bạn biết <em>Emmet</em> là gì nha.
+          </p>
+          <div class="img">
+            <img src="/icon/computer.png" alt=":((" />
+          </div>
+          <p>
+            Ai cũng thấy việc đóng mở thẻ trong <em>HTML</em> rất là mất thời
+            gian <em>Emmet</em> sinh ra để giải quyết việc đó.
+          </p>
+          <p>
+            Ví dụ như bạn cần một đoạn HTML như sau:
+          </p>
+          <div class="html-text">
+            <img src="/main/Basic/codepen/ex1.png" alt=":((" />
+          </div>
+          <p>
+            Ta chỉ cần gõ <strong>div.container>div.item*3</strong> sau đó bấm
+            phím Tab là có ngay. Rất tiện phải không nào? Bây giờ không phải lo
+            mở hay đóng thẻ nữa rồi. Có Emmet sẽ cải thiện hiệu suất code của
+            bạn lên rất nhiều đấy!
+          </p>
+          <p>
+            Bạn cần một thẻ thì cứ việc gõ <em>tên thẻ</em> sau đó gõ phím Tab
+            thì bạn sẽ được một thẻ <strong>HTML</strong> hoàn chỉnh. Nếu muốn
+            thêm luôn <strong>Class</strong> thì gõ theo cú pháp
+            <em>tên thẻ.tên class</em> rồi Tab, còn <strong>ID</strong> thì chỉ
+            cần đổi thành dấu <em>#</em> là được nha!
+          </p>
+          <p>
+            Các bạn muốn tham khảo thêm về <a href="https://emmet.io/">Emmet</a>
+          </p>
+          <h4 class="caption" id="cap6">Kết</h4>
+          <p>
+            Nói chung Animation cũng không quá khó để làm quen. Ở những bài sau
+            mình sẽ hướng dẫn các bạn cụ thể hơn nha.
+          </p>
+          <p class="end">-----The End-----</p>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer>
+      <div class="item">
+        <p class="logo">Visual Animation</p>
+      </div>
+      <div class="item">
+        <p>Template by: <a href="https://evondev.com/">Evondev</a></p>
+      </div>
+      <div class="item">
+        <p>Coded by: Tris Tran</p>
+      </div>
+      <div class="item">
+        <p>@Copyright Visual Animation</p>
+        <div>
+          Icons by
+          <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>
+        </div>
+        <div>
+          Image by:
+          <a href="https://www.freepik.com/free-photos-vectors/background"
+            >Freepik
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

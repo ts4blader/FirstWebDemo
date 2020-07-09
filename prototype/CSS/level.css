@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Lexend+Deca|Press+Start+2P|Righteous&display=swap");
+:root {
+  --main-color: white;
+  --body-bg: #580dd1;
+  --mark-color: #f7f9fb;
+  --main-bg: #222f3e;
+  --btn-bg: #341f97;
+  --sub-font: "Righteous";
+  --main-font: "Lexend Deca";
+  --pixel-font: "Press Start 2P";
+}
+header {
+  height: 10vh;
+  background: white;
+  box-shadow: 0px 0.1rem 5rem rgba(0, 0, 0, 0.2);
+}
+header a {
+  color: #222f3e;
+}
+header .logo {
+  color: #222f3e;
+}
+footer {
+  padding: 0 5vw;
+}
+#main {
+  width: 65%;
+  margin: 15vh auto;
+  margin-top: 20vh;
+}
+#main > .caption {
+  width: 100%;
+  position: relative;
+}
+#main .caption h2 {
+  margin: auto;
+  width: max-content;
+  font-size: 8rem;
+  color: var(--main-bg);
+  padding: 0 3rem;
+  background: var(--mark-color);
+}
+.caption .bar {
+  z-index: -1;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 1rem;
+  border-radius: 1rem;
+  background: var(--main-bg);
+}
+.caption h2::before {
+  content: "#";
+}
+#main .content {
+  margin: 10vh auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+#main .content .item {
+  width: 40%;
+  height: 40vh;
+  margin: 3rem 0;
+  box-shadow: 0 0 10rem rgba(51, 73, 90, 0.2);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition-property: transform, box-shadow;
+  transition: 300ms ease;
+  box-shadow: 0 0 5rem rgba(7, 7, 7, 0.3);
+}
+#main .item .img {
+  width: 100%;
+  height: 70%;
+}
+#main .item .caption {
+  height: 30%;
+  width: 100%;
+  background: white;
+  color: var(--main-bg);
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main .item:hover {
+  transform: translateY(-7%);
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 1024px) {
+  #main {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #main {
+    width: 90%;
+  }
+  #main .content .item {
+    width: 80%;
+  }
+  #main .content .item .caption {
+    font-size: 5vw;
+  }
+  #main .content .item .img p {
+    font-size: 6vw;
+  }
+}

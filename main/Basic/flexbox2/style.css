@@ -1,0 +1,92 @@
+#main::after {
+  background: #22a6b3;
+}
+.example .container-ex {
+  color: white;
+  background: #2d3436;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+}
+.example .container-ex .item {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+}
+.example .container-ex .item1 {
+  background: green;
+}
+.example .container-ex .item2 {
+  background: lightblue;
+}
+.example .container-ex .item3 {
+  background: teal;
+}
+.example2 .container-ex {
+  justify-content: flex-end;
+}
+.example3 .container-ex {
+  justify-content: center;
+}
+.example4 .container-ex {
+  justify-content: space-between;
+}
+.example5 .container-ex {
+  justify-content: space-around;
+}
+.order-ex .container-ex {
+  justify-content: center;
+}
+.order-ex .container-ex p {
+  text-align: center;
+}
+.example7 .item1 {
+  order: 1;
+}
+.example7 .item2 {
+  order: 3;
+}
+.example7 .item3 {
+  order: 2;
+}
+.example8 .item2 {
+  order: 1;
+}
+.align-item .container-ex {
+  width: 100%;
+  height: 100%;
+}
+.example10 .container-ex {
+  align-items: flex-end;
+}
+.example11 .container-ex {
+  align-items: center;
+}
+.example12 .container-ex {
+  align-items: stretch;
+}
+.example12 .container-ex .item {
+  height: auto;
+}
+.example13 .container-ex {
+  align-items: baseline;
+}
+.example13 .container-ex .item1 {
+  font-size: 5rem;
+}
+.example13 .container-ex .item2 {
+  font-size: 2rem;
+}
+.example13 .container-ex .item3 {
+  font-size: 8rem;
+}
+.example14 .container-ex .item2 {
+  align-self: center;
+}
+@media screen and (max-width: 768px) {
+  .bg .caption h2 {
+    font-size: 8vw;
+  }
+}

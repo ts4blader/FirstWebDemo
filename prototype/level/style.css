@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css?family=Lexend+Deca|Press+Start+2P|Righteous&display=swap");
+:root {
+  --main-color: white;
+  --body-bg: #580dd1;
+  --mark-color: #f7f9fb;
+  --main-bg: #222f3e;
+  --btn-bg: #341f97;
+  --sub-font: "Righteous";
+  --main-font: "Lexend Deca";
+  --pixel-font: "Press Start 2P";
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Lexend Deca";
+  font-weight: 500;
+}
+body {
+  background: var(--mark-color);
+}
+/* top button */
+.top-btn-box {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  background: var(--btn-bg);
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms cubic-bezier(0.5, -0.37, 0.42, 1.48);
+  z-index: 3;
+  transform: scale(0);
+  opacity: 0.8;
+}
+.top-btn {
+  font-family: "Righteous";
+  font-size: 3.7rem;
+  transform: rotate(-90deg);
+  color: var(--main-color);
+  transition: inherit;
+}
+.scale {
+  transform: scale(1);
+}
+.top-btn-box:hover {
+  background: #00b894;
+  transform: scale(1.2);
+  transition-duration: 500ms;
+}
+/* header */
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 10vh;
+  background: var(--main-color);
+  box-shadow: 0px 0.1rem 5rem rgba(0, 0, 0, 0.2);
+  opacity: 0.95;
+  z-index: 3;
+}
+header .logo-box {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+header .logo-box .logo {
+  font-family: "Righteous";
+  font-size: 2.5rem;
+  color: var(--main-bg);
+  border: 0.4rem solid var(--main-bg);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.8rem;
+}
+header .nav-box {
+  width: 40%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .nav-box .active::after {
+  width: 100%;
+}
+header .nav-box a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--main-bg);
+  position: relative;
+}
+header .nav-box a::after {
+  content: "";
+  width: 0%;
+  height: 0.3rem;
+  background: #00cec9;
+  opacity: 0.9;
+  display: block;
+  border-radius: 0.2rem;
+  margin: 0 auto;
+  transition: width 300ms ease;
+}
+header .nav-box a:hover::after {
+  width: 100%;
+  transition-duration: 400ms;
+}
+/* loader */
+.loader-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--main-bg);
+  z-index: 5;
+  transition: width 500ms ease;
+  overflow: hidden;
+}
+.collapse {
+  width: 0;
+}
+#loader h3 {
+  overflow: hidden;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: var(--pixel-font);
+  font-size: 4rem;
+  font-weight: 500;
+  animation: loader 1.5s infinite steps(4) reverse;
+}
+@keyframes loader {
+  100% {
+    width: 240px;
+  }
+}
+/* footer */
+footer {
+  width: 100%;
+  height: 10vh;
+  background: var(--main-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  color: #ccc;
+}
+footer a:link,
+footer a:visited {
+  color: #00b894;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
+#main {
+  width: 65%;
+  margin: 15vh auto;
+}
+#main > .caption {
+  width: 100%;
+  position: relative;
+}
+#main .caption h2 {
+  margin: auto;
+  width: max-content;
+  font-size: 8rem;
+  color: var(--main-bg);
+  padding: 0 3rem;
+  background: var(--mark-color);
+}
+.caption .bar {
+  z-index: -1;
+  width: 100%;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 1rem;
+  border-radius: 1rem;
+  background: var(--main-bg);
+}
+.caption h2::before {
+  content: "#";
+}
+#main .content {
+  margin: 10vh auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.content .item {
+  width: 40%;
+  height: 40vh;
+  margin: 3rem 0;
+  box-shadow: 0 0 10rem rgba(51, 73, 90, 0.2);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition-property: transform, box-shadow;
+  transition: 300ms ease;
+  box-shadow: 0 0 5rem rgba(7, 7, 7, 0.3);
+}
+.item .img {
+  width: 100%;
+  height: 70%;
+}
+.item .caption {
+  height: 30%;
+  width: 100%;
+  background: white;
+  color: var(--main-bg);
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item:hover {
+  transform: translateY(-7%);
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
+}

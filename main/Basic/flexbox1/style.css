@@ -1,0 +1,96 @@
+#main::after {
+  background: #22a6b3;
+}
+.example .container-ex {
+  color: white;
+  background: #2d3436;
+  position: relative;
+  display: flex;
+  width: 70%;
+  height: 30%;
+}
+.example .container-ex .item {
+  width: 18%;
+  height: 100%;
+  text-align: center;
+}
+.example .container-ex .item1 {
+  background: coral;
+}
+.example .container-ex .item2 {
+  background: lightblue;
+}
+.example .container-ex .item3 {
+  background: red;
+}
+.example .container-ex .item4 {
+  background: brown;
+}
+.example2 .container-ex {
+  flex-direction: row-reverse;
+}
+.example3 .container-ex {
+  height: 70%;
+  width: 20%;
+  flex-direction: column;
+}
+.example3 .container-ex .item {
+  height: 18%;
+  width: 100%;
+}
+.example4 .container-ex {
+  height: 70%;
+  width: 20%;
+  flex-direction: column-reverse;
+}
+.example4 .container-ex .item {
+  height: 18%;
+  width: 100%;
+}
+div.example5 .container-ex {
+  width: 100%;
+}
+.example .container-ex + p {
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+div.example6 .container-ex {
+  width: 50%;
+}
+div.example7 .container-ex {
+  width: 100%;
+}
+div.example7 .container-ex .item {
+  width: 150px;
+}
+div.example8 .container-ex {
+  flex-wrap: wrap;
+  width: 50%;
+}
+div.example8 .container-ex .item {
+  width: 150px;
+}
+div.example9 .container-ex {
+  width: 100%;
+}
+div.example9 .container-ex .item {
+  width: 150px;
+}
+div.example10 .container-ex {
+  height: auto;
+  flex-wrap: wrap-reverse;
+  width: 50%;
+}
+div.example10 .container-ex .item {
+  width: 150px;
+  height: 100px;
+}
+@media screen and (max-width: 768px) {
+  .bg .caption h2 {
+    font-size: 8vw;
+  }
+}

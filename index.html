@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/prototype/CSS/template.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/prototype/responsive/responsive.css" />
+    <script src="JQuery/jquery-3.4.1.min.js"></script>
+    <script src="/prototype/JS/template.js"></script>
+    <script src="app.js"></script>
+    <script src="/prototype/responsive/menu.js"></script>
+    <title>Visual Animation - Create animation with HTML & CSS</title>
+  </head>
+
+  <body>
+    <div class="loader-container" id="loader">
+      <div class="loader">
+        <h3>Loading...</h3>
+      </div>
+    </div>
+
+    <a id="top-btn" class="top-btn-box" href="#" title="top">
+      <div class="top-btn">></div>
+    </a>
+
+    <div class="overlay-menu" id="overlay-menu">
+      <img src="/icon/menu.png" alt=":((" class="close-btn" id="close-btn" />
+      <ul class="nav-in-btn">
+        <li><a href="/index.html" class="active" id="home-menu">Home</a></li>
+        <li><a href="/main/Basic/index.html" id="basic-menu">Basic</a></li>
+        <li>
+          <a href="/main/Advanced/index.html" id="advanced-menu">Advanced</a>
+        </li>
+        <li>
+          <a href="/main/About us/index.html" id="about-menu">About Us</a>
+        </li>
+      </ul>
+    </div>
+
+    <header>
+      <div class="logo-box">
+        <div class="logo" id="logo">Visual Animation</div>
+      </div>
+      <ul class="nav-box">
+        <li><a href="index.html" class="active" id="home">Home</a></li>
+        <li><a href="/main/Basic/index.html" id="Basic">Basic</a></li>
+        <li><a href="/main/Advanced/index.html" id="advanced">Advanced</a></li>
+        <li><a href="/main/About us/index.html" id="about-us">About Us</a></li>
+      </ul>
+      <img src="/icon/menu-black.png" alt=":((" id="open-btn" />
+    </header>
+
+    <div class="bg-container" id="page-bg">
+      <!-- <img src="/image/geometry-square-dark.png" alt="" /> -->
+      <div class="content">
+        <div class="title">
+          <h2>Visual Animation</h2>
+        </div>
+        <p>[ Create amazing animation with HTML5 & CSS3 ]</p>
+      </div>
+      <div class="down-arrow">
+        <p>>></p>
+      </div>
+    </div>
+
+    <div id="get-start-box" class="content-box">
+      <div class="caption">
+        <h3>#Get Start!</h3>
+        <div class="bar"></div>
+      </div>
+      <div class="content">
+        <div class="item">
+          <h4 class="title">Let's Go!</h4>
+          <p>Hãy đảm bảo rằng bạn đã biết cơ bản về HTML & CSS</p>
+          <p>Nếu bạn không biết, hãy học nó tại đây:</p>
+          <ul>
+            <li>
+              <a href="https://www.freecodecamp.org">FreeCodeCamp</a>
+            </li>
+            <li>
+              <a href="https://www.w3schools.com/">W3School</a>
+            </li>
+          </ul>
+          <a href="main/main.html" class="btn" id="button-get-start"
+            >Đã hiểu!</a
+          >
+        </div>
+        <div class="item">
+          <img src="icon/creativity-ink.png" alt="Creative" />
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div id="showcase-box" class="content-box">
+      <div class="caption">
+        <h3>#ShowCase</h3>
+        <div class="bar"></div>
+      </div>
+      <div class="content">
+        <div class="item" id="loading-item">
+          <div class="caption">
+            <h4>Loading</h4>
+            <svg
+              id="add-btn"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 293 293"
+              style="enable-background: new 0 0 293 293;"
+              xml:space="preserve"
+            >
+              <style type="text/css">
+                .st0 {
+                  fill: #33cc99;
+                  fill: transparent;
+                }
+
+                .st1 {
+                  fill: #ffffff;
+                }
+              </style>
+              <title>addBtn</title>
+              <path
+                class="st0"
+                d="M146.5,0L146.5,0C227.4,0,293,65.6,293,146.5l0,0c0,80.9-65.6,146.5-146.5,146.5l0,0C65.6,293,0,227.4,0,146.5
+    	l0,0C0,65.6,65.6,0,146.5,0z"
+              />
+              <path
+                id="bar1"
+                class="st1"
+                d="M147,40L147,40c8.8,0,16,7.2,16,16v180c0,8.8-7.2,16-16,16l0,0c-8.8,0-16-7.2-16-16V56
+    	C131,47.2,138.2,40,147,40z"
+              />
+              <path
+                id="bar2"
+                class="st1"
+                d="M237,162H57c-8.8,0-16-7.2-16-16v0c0-8.8,7.2-16,16-16h180c8.8,0,16,7.2,16,16v0C253,154.8,245.8,162,237,162z"
+              />
+            </svg>
+          </div>
+          <div class="item-content">
+            <div class="container">
+              <div class="text">Loading...</div>
+            </div>
+          </div>
+          <div class="overlay"></div>
+        </div>
+        <div class="item" id="button-item">
+          <div class="caption">
+            <h4>Button</h4>
+            <svg
+              id="add-btn"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 293 293"
+              style="enable-background: new 0 0 293 293;"
+              xml:space="preserve"
+            >
+              <style type="text/css">
+                .st0 {
+                  fill: #33cc99;
+                  fill: transparent;
+                }
+
+                .st1 {
+                  fill: #ffffff;
+                }
+              </style>
+              <title>addBtn</title>
+              <path
+                class="st0"
+                d="M146.5,0L146.5,0C227.4,0,293,65.6,293,146.5l0,0c0,80.9-65.6,146.5-146.5,146.5l0,0C65.6,293,0,227.4,0,146.5
+    	l0,0C0,65.6,65.6,0,146.5,0z"
+              />
+              <path
+                id="bar1"
+                class="st1"
+                d="M147,40L147,40c8.8,0,16,7.2,16,16v180c0,8.8-7.2,16-16,16l0,0c-8.8,0-16-7.2-16-16V56
+    	C131,47.2,138.2,40,147,40z"
+              />
+              <path
+                id="bar2"
+                class="st1"
+                d="M237,162H57c-8.8,0-16-7.2-16-16v0c0-8.8,7.2-16,16-16h180c8.8,0,16,7.2,16,16v0C253,154.8,245.8,162,237,162z"
+              />
+            </svg>
+          </div>
+          <div class="item-content">
+            <div class="container">
+              <div class="btn">Hover Me</div>
+              <div class="btn">Hover Me</div>
+            </div>
+          </div>
+          <div class="overlay"></div>
+        </div>
+        <div class="item" id="animation-item">
+          <div class="caption">
+            <h4>Animation</h4>
+            <svg
+              id="add-btn"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 293 293"
+              style="enable-background: new 0 0 293 293;"
+              xml:space="preserve"
+            >
+              <style type="text/css">
+                .st0 {
+                  fill: #33cc99;
+                  fill: transparent;
+                }
+
+                .st1 {
+                  fill: #ffffff;
+                }
+              </style>
+              <title>addBtn</title>
+              <path
+                class="st0"
+                d="M146.5,0L146.5,0C227.4,0,293,65.6,293,146.5l0,0c0,80.9-65.6,146.5-146.5,146.5l0,0C65.6,293,0,227.4,0,146.5
+    	l0,0C0,65.6,65.6,0,146.5,0z"
+              />
+              <path
+                id="bar1"
+                class="st1"
+                d="M147,40L147,40c8.8,0,16,7.2,16,16v180c0,8.8-7.2,16-16,16l0,0c-8.8,0-16-7.2-16-16V56
+    	C131,47.2,138.2,40,147,40z"
+              />
+              <path
+                id="bar2"
+                class="st1"
+                d="M237,162H57c-8.8,0-16-7.2-16-16v0c0-8.8,7.2-16,16-16h180c8.8,0,16,7.2,16,16v0C253,154.8,245.8,162,237,162z"
+              />
+            </svg>
+          </div>
+          <div class="item-content">
+            <div class="container">
+              <h4 class="logo">Visual Animation</h4>
+              <p class="enter">Enter</p>
+            </div>
+          </div>
+          <div class="overlay"></div>
+        </div>
+        <div class="item" id="other-item">
+          <div class="caption">
+            <h4>Other</h4>
+            <svg
+              id="add-btn"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 293 293"
+              style="enable-background: new 0 0 293 293;"
+              xml:space="preserve"
+            >
+              <style type="text/css">
+                .st0 {
+                  fill: #33cc99;
+                }
+
+                .st1 {
+                  fill: #ffffff;
+                }
+              </style>
+              <title>addBtn</title>
+              <path
+                class="st0"
+                d="M146.5,0L146.5,0C227.4,0,293,65.6,293,146.5l0,0c0,80.9-65.6,146.5-146.5,146.5l0,0C65.6,293,0,227.4,0,146.5
+    	l0,0C0,65.6,65.6,0,146.5,0z"
+              />
+              <path
+                id="bar1"
+                class="st1"
+                d="M147,40L147,40c8.8,0,16,7.2,16,16v180c0,8.8-7.2,16-16,16l0,0c-8.8,0-16-7.2-16-16V56
+    	C131,47.2,138.2,40,147,40z"
+              />
+              <path
+                id="bar2"
+                class="st1"
+                d="M237,162H57c-8.8,0-16-7.2-16-16v0c0-8.8,7.2-16,16-16h180c8.8,0,16,7.2,16,16v0C253,154.8,245.8,162,237,162z"
+              />
+            </svg>
+          </div>
+          <div class="item-content">
+            <div class="container">
+              <p class="slash">/</p>
+            </div>
+          </div>
+          <div class="overlay"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="item">
+        <p class="logo">Visual Animation</p>
+      </div>
+      <div class="item">
+        <p>Template by: <a href="https://evondev.com/">Evondev</a></p>
+      </div>
+      <div class="item">
+        <p>Coded by: Tris Tran</p>
+      </div>
+      <div class="item">
+        <p>@Copyright Visual Animation</p>
+        <div>
+          Icons by
+          <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>
+        </div>
+        <div>
+          Image by:
+          <a href="https://www.freepik.com/free-photos-vectors/background"
+            >Freepik
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/prototype/CSS/template.css">
+    <link rel="stylesheet" href="/prototype/CSS/blog.css" />
+    <link rel="stylesheet" href="/prototype/responsive/responsive.css">
+    <link rel="stylesheet" href="style.css" />
+    <script src="/JQuery/jquery-3.4.1.min.js"></script>
+    <script src="/prototype/JS/template.js"></script>
+    <title>Flexbox (Phần 2) - Layout Website</title>
+  </head>
+  <body>
+    <!-- loader -->
+    <div class="loader-container" id="loader">
+      <div class="loader">
+        <h3>Loading...</h3>
+      </div>
+    </div>
+    <!-- float button -->
+    <a id="top-btn" class="top-btn-box" href="#" title="top">
+      <div class="top-btn">></div>
+    </a>
+
+    <a class="menu-btn" href="#menu" title="Mục Lục">
+      <img src="/icon/menu.png" alt=":((" />
+    </a>
+    <!-- header -->
+    <div class="overlay-menu" id="overlay-menu">
+      <img src="/icon/menu.png" alt=":((" class="close-btn" id="close-btn" />
+      <ul class="nav-in-btn">
+        <li><a href="/index.html" id="home-menu">Home</a></li>
+        <li>
+          <a href="/main/Basic/index.html" id="basic-menu" class="active"
+            >Basic</a
+          >
+        </li>
+        <li>
+          <a href="/main/Advanced/index.html" id="advanced-menu">Advanced</a>
+        </li>
+        <li>
+          <a href="/main/About us/index.html" id="about-menu">About Us</a>
+        </li>
+      </ul>
+    </div>
+
+    <header>
+      <div class="logo-box">
+        <div class="logo" id="logo">Visual Animation</div>
+      </div>
+      <ul class="nav-box">
+        <li><a href="/index.html" id="home">Home</a></li>
+        <li>
+          <a href="/main/Basic/index.html" id="Basic" class="active">Basic</a>
+        </li>
+        <li><a href="/main/Advanced/index.html" id="advanced">Advanced</a></li>
+        <li><a href="/main/About us/index.html" id="about-us">About Us</a></li>
+      </ul>
+      <img src="/icon/menu-black.png" alt=":((" id="open-btn" />
+    </header>
+    <!-- main background -->
+    <div class="bg" id="bg">
+      <div class="caption">
+        <h2>Flexbox (Phần 2)</h2>
+      </div>
+    </div>
+    <!-- document background -->
+    <div id="main" class="main-container">
+      <div class="title-image">
+        <img src="/icon/ui.png" alt=":((" />
+      </div>
+      <!-- document category -->
+      <ul class="list" id="menu">
+        <h4>Nội dung</h4>
+        <li><a href="#cap1">Mở Đầu</a></li>
+        <li><a href="#cap2">Justify-content</a></li>
+        <li><a href="#cap3">Order</a></li>
+        <li><a href="#cap4">Align-items</a></li>
+        <li><a href="#cap5">Algin-self</a></li>
+        <li><a href="#cap6">Kết</a></li>
+      </ul>
+      <!-- content -->
+      <div class="content">
+        <div class="section">
+          <h4 class="caption" id="cap1">Mở Đầu</h4>
+          <p>
+            Lại là mình đây. Ở bài trước chúng ta đã tìm hiểu ba thuộc tính của
+            <em>Flexbox</em> hôm nay chúng ta sẽ tìm hiểu những thuộc tính canh
+            hàng của <em>Flexbox</em>.
+          </p>
+          <h4 class="caption" id="cap2">Justify-content</h4>
+          <p>
+            Đây là thuộc tính căn chỉnh các <em>items</em> theo hàng ngang hay
+            dọc dựa theo thuộc tính <em>Flex-direction</em> mà các bạn đã định
+            trước đó. Ở đây mình sẽ cho vài ví dụ để demo nhé!
+          </p>
+          <p>Chúng ta có đoạn <strong>HTML</strong> như sau:</p>
+          <p>
+            Các bạn có thể đánh số cho dễ nhìn nha!
+          </p>
+          <div class="html-text">
+            <img src="/main/Basic/flexbox2/ex1.png" alt=":((" />
+          </div>
+          <p>Và <strong>CSS</strong> như thế này:</p>
+          <div class="textbox">
+            <pre>
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    background: black;
+}
+.item {
+    width: 150px;
+    height: 150px;
+}
+.item1 {
+    background: green;
+}
+.item2 {
+    background: lightblue;
+}
+.item3 {
+    background: teal;
+}
+              </pre
+            >
+          </div>
+          <p>
+            Kết quả như sau:
+          </p>
+          <div class="example example1">
+            <div class="container-ex">
+              <div class="item item1">1</div>
+              <div class="item item2">2</div>
+              <div class="item item3">3</div>
+            </div>
+          </div>
+          <p>
+            Sau đây để thì mình xin trình bày các giá trị của <em>Justify-content</em> 
+            theo <em>flex-direction: row</em> nha!
+          </p>
+          <ul>
+            <li><p>
+              <em>flex-start</em>: đây là giá trị mặc định của <em>Justify-content</em>, các 
+              <em>items</em> được nằm sát lề bên trái <em>container</em>.
+            </p></li>
+            <div class="example example1">
+              <div class="container-ex">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+              </div>
+            </div>
+            <li><p>
+              <em>flex-end</em>: tương tự như <em>flex-start</em> nhưng <em>items</em> 
+              nằm sát lề bên phải.
+            </p></li>
+            <div class="example example2">
+              <div class="container-ex">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+              </div>
+            </div>
+            <p>
+              <strong>NOTE</strong>: Các bạn đừng nhầm với <em>row-reverse</em> nha. <em>Row-reverse</em>
+              nó đảo lộn thứ tự của các <em>items</em> còn <em>flex-end</em> thì không nha!
+            </p>
+            <li><p>
+              <em>center</em>: các <em>items</em> sẽ được canh giữa <em>container</em>.
+            </p></li>
+            <div class="example example3">
+              <div class="container-ex">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+              </div>
+            </div>
+            <li><p>
+              <em>space-between</em>: <em>item</em> đầu tiên nằm sát lề bên trái, <em>item</em> 
+              cuối cùng nằm sát lề bên phải, phần tử còn lại được chia đều các khoảng trống.
+            </p></li>
+            <div class="example example4">
+              <div class="container-ex">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+              </div>
+            </div>
+            <li><p>
+              <em>space-around</em>: gần giống với <em>space-between</em> nhưng khoảng cách giữa lề 2 bên 
+              của <em>container</em> bằng <strong>một nửa</strong> so với khoảng cách giữa các <em>items</em>.
+            </p></li>
+            <div class="example example5">
+              <div class="container-ex">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+              </div>
+            </div>
+          </ul>
+          <p>
+            Còn về theo <em>Flex-direction: column</em> thì mình khuyên các bạn nên 
+            tự code để nắm vững hơn nha!
+          </p>
+          <h4 class="caption" id="cap3">Order</h4>
+          <p>
+            Phải nói đây là phần khá khó chịu của <em>Flexbox</em> mà mình cũng chưa thành thạo.
+            <em>Order</em> là giá trị thứ tự của phần tử đó dùng để đổi vị trí hiển thị các phần tử.
+          </p>
+          <p>
+            Giá trị của thuộc tính <em>Order</em> chỉ là những con số, mặc định là số 0.
+          </p>
+          <p>
+            Nói không thì khá khó hiểu, mình sẽ demo luôn cho các bạn xem.
+          </p>
+          <p>
+            <strong>NOTE</strong>: order là thuộc tính nằm trong phần tử <em>items</em>.
+          </p>
+          <div class="example example6 order-ex">
+            <div class="container-ex">
+              <div class="item item1">1
+                <p>order: 0</p>
+              </div>
+              <div class="item item2">2
+                <p>order: 0</p>
+              </div>
+              <div class="item item3">3
+                <p>order: 0</p>
+              </div>
+            </div>
+          </div>
+          <p>
+            Trong ví dụ trên thì mình sử dụng <em>Justify-content: center</em> cho nó dễ nhìn.
+          </p>
+          <p>
+            Bây giờ mình muốn đổi ô số 3 lên ô số 2 thì phải làm sao nhỉ? Có nhiều cách sử dụng <em>Order</em>.
+          </p>
+          <p>
+            Ví dụ: mình order ô số 1 là 1, ô số 2 là 3, ô số 3 là 2.
+          </p>
+          <div class="example example7 order-ex">
+            <div class="container-ex">
+              <div class="item item1">1
+                <p>order: 1</p>
+              </div>
+              <div class="item item2">2
+                <p>order: 3</p>
+              </div>
+              <div class="item item3">3
+                <p>order: 2</p>
+              </div>
+            </div>
+          </div>
+          <p>
+            Còn một cách khác: order ô số 2 là 1.
+          </p>
+          <div class="example example8 order-ex">
+            <div class="container-ex">
+              <div class="item item1">1
+                <p>order: 0</p>
+              </div>
+              <div class="item item2">2
+                <p>order: 1</p>
+              </div>
+              <div class="item item3">3
+                <p>order: 0</p>
+              </div>
+            </div>
+          </div>
+          <p>
+            Qua 2 ví dụ chắc các bạn cũng hiểu rồi, ô nào có <em>Order</em> lớn hơn thì đứng sau. Còn nếu 
+            <em>Order</em> bằng nhau thì theo thứ tự của <em>HTML</em>.
+          </p>
+          <p>
+            Khá là dễ hiểu phải không? Chúng ta cùng qua thuộc tính kế tiếp của
+            <em>Flexbox</em>
+            nào!
+          </p>
+          <h4 class="caption" id="cap4">Align-items</h4>
+          <p>
+            Nếu thuộc tính <em>Justify-content</em> căn theo chiều ngang thì <em>Align-items</em> 
+            căn theo chiều dọc, <em>Justify-content</em> căn theo chiều dọc thì <em>Align-items</em> 
+            căn theo chiều ngang. Nói chung hai thuộc tính <em>Justify-content</em> và <em>Align-items</em> 
+            phụ thuộc vào <em>flex-direction</em>.
+          </p>
+          <p>
+            <em>Align-items</em> bao gồm có 5 giá trị: ở đây mình sử dụng <em>flex-direction: row</em>
+          </p>
+          <ul>
+            <li><p>
+              <em>flex-start</em>: các <em>items</em> sẽ nằm ở góc trên của <em>container</em>.
+            </p></li>
+            <div class="example example9 align-item">
+              <div class="container-ex">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+              </div>
+            </div>
+            <li><p>
+              <em>flex-end</em>: tương tự <em>flex-start</em> nhưng các <em>items</em> nằm ở góc dưới.
+            </p></li>
+            <div class="example example10 align-item">
+              <div class="container-ex">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+              </div>
+            </div>
+            <li><p>
+              <em>center</em>: các phần tử sẽ nằm giữa <em>container</em>.
+            </p></li>
+            <div class="example example11 align-item">
+              <div class="container-ex">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+              </div>
+            </div>
+            <li><p>
+              <em>stretch</em>: Đây là giá trị mặc định của <em>Align-items</em>, nó sẽ kéo dài 
+              <em>width</em> hay <em>height</em> nếu bạn chưa định <em>width</em> hoặc <em>height</em> của phần tử tùy vào <em>flex-direction</em>.
+            </p></li>
+            <div class="example example12 align-item">
+              <div class="container-ex">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+              </div>
+            </div>
+            <li><p>
+              <em>baseline</em>: nó sẽ canh các phần tử dựa vào chữ nằm bên trong(chỉ dòng đầu tiên).
+            </p></li>
+            <div class="example example13 align-item">
+              <div class="container-ex">
+                <div class="item item1">1</div>
+                <div class="item item2">2</div>
+                <div class="item item3">3</div>
+              </div>
+            </div>
+            <p>
+              Phần tử <em>item</em> nào có <em>font-size</em> lớn hơn thì đứng trên <em>item</em> 
+              có <em>font-size</em> nhỏ hơn.
+            </p>
+            <p>
+              Còn phần <em>flex-direction: column</em> các bạn tự code thêm nha!
+            </p>
+            <p>
+              <strong>NOTE</strong>: <em>baseline</em> không hoạt động khi <em>flex-direction: column</em>.
+            </p>
+          <h4 class="caption" id="cap5">Algin-self</h4>
+          <p>
+            Thuộc tính này thì tương tự <em>Align-items</em> thôi nhé. Nhưng nó chỉ áp dụng trên từng phần tử mà thôi.
+          </p>
+          <p>
+            Ví dụ cho dễ hiểu nè: bạn chỉ muốn ô số 2 nằm giữa <em>container</em>.
+          </p>
+          <div class="example example14 align-item">
+            <div class="container-ex">
+              <div class="item item1">1</div>
+              <div class="item item2">2</div>
+              <div class="item item3">3</div>
+            </div>
+          </div>
+          <h4 class="caption" id="cap6">Kết</h4>
+          <p>
+            Bài này khá là dài nên các bạn chịu khó đọc xíu nha! Chỉ còn một phần nữa là hết <em>Flexbox</em> 
+            rồi đó, Cố lên!
+          </p>
+          <p class="end">-----The End-----</p>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer>
+      <div class="item">
+        <p class="logo">Visual Animation</p>
+      </div>
+      <div class="item">
+        <p>Template by: <a href="https://evondev.com/">Evondev</a></p>
+      </div>
+      <div class="item">
+        <p>Coded by: Tris Tran</p>
+      </div>
+      <div class="item">
+        <p>@Copyright Visual Animation</p>
+        <div>
+          Icons by
+          <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>
+        </div>
+        <div>
+          Image by:
+          <a href="https://www.freepik.com/free-photos-vectors/background"
+            >Freepik
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

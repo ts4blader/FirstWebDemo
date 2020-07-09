@@ -1,0 +1,131 @@
+.img img {
+  height: 80%;
+}
+.img p {
+  color: white;
+}
+#basic-btn .img {
+  background: #6c5ce7;
+  position: relative;
+}
+#basic-btn .img::after {
+  content: "Button";
+  letter-spacing: 0.2rem;
+  color: white;
+  width: 60%;
+  text-align: center;
+  padding: 2rem 0;
+  box-sizing: border-box;
+  font-size: 3.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.5rem solid white;
+  border-radius: 1rem;
+}
+#transition .img {
+  background: #d63031;
+  position: relative;
+}
+#transition .box {
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#transition .bar {
+  width: 80%;
+  height: 1.5rem;
+  background: white;
+  margin: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 1.2rem 0.7rem 0 rgba(0, 0, 0, 0.2);
+}
+#transition .bar2 {
+  width: 60%;
+}
+#transition .bar3 {
+  width: 40%;
+}
+#position .img {
+  background: #0984e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+#position .img p {
+  font-size: 3.5rem;
+  color: white;
+  border-bottom: 3px dashed;
+}
+#position .img p:nth-child(1) {
+  transform: translateX(-40%);
+  text-transform: capitalize;
+}
+#position .img p:nth-child(3) {
+  transform: translateX(40%);
+  text-transform: capitalize;
+}
+#pseudo .img {
+  background: #00b894;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#pseudo .img p {
+  color: white;
+  font-size: 4rem;
+  /* border-top: 5px solid; */
+  position: relative;
+}
+#pseudo .img p::after {
+  content: "";
+  position: absolute;
+  width: 93%;
+  top: -15%;
+  left: 0;
+  background: white;
+  height: 0.5rem;
+}
+#pseudo .img p::before {
+  content: "";
+  position: absolute;
+  width: 4%;
+  top: -15%;
+  right: 0;
+  background: white;
+  height: 0.5rem;
+}
+#form .img {
+  background: #00cec9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#loading .img {
+  background: #95afc0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#navigation .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #74b9ff;
+}
+#css-var .img {
+  background: #30336b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#css-var .img p {
+  font-size: 4.5rem;
+  border-left: 5px solid;
+  border-right: 5px solid;
+  padding: 0 2rem;
+}

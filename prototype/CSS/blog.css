@@ -1,0 +1,260 @@
+.bg {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(/image/mordern-bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+.bg::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.bg .caption {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  z-index: 2;
+}
+.bg .caption::after {
+  content: "";
+  width: 130%;
+  height: 10px;
+  background: white;
+  position: absolute;
+  top: -25%;
+  left: -50%;
+  transform: skewX(30deg);
+}
+.bg .caption::before {
+  content: "";
+  width: 17%;
+  height: 10px;
+  background: white;
+  position: absolute;
+  top: -25%;
+  left: 83%;
+  transform: skewX(30deg);
+}
+.bg .caption h2 {
+  font-size: 8rem;
+  color: white;
+}
+.bg .caption h2::before {
+  content: "#";
+}
+
+.menu-btn {
+  display: inline-block;
+  position: fixed;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  background: #00b894;
+  transform: scale(0);
+  bottom: 5%;
+  left: 5%;
+  transition: transform 300ms ease;
+  z-index: 3;
+}
+.menu-btn img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60%;
+}
+.scale {
+  transform: scale(1);
+}
+.menu-btn:hover {
+  transform: scale(1.2);
+  background: #6c5ce7;
+}
+#main {
+  width: 65%;
+  margin: 15vh auto;
+  padding: 0 5%;
+  border-radius: 1rem;
+  box-shadow: 0 0 10rem rgba(51, 50, 50, 0.2);
+  color: var(--main-bg);
+  padding-bottom: 1%;
+  position: relative;
+  overflow: hidden;
+}
+#main .title-image {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #f0932b;
+  width: 100%;
+  height: 60vh;
+}
+#main .title-image img {
+  z-index: 1;
+  height: 70%;
+}
+#main .caption h3::before {
+  content: "#";
+}
+#main .list {
+  margin: 3% 0;
+  font-size: 2.2rem;
+  list-style: none;
+  width: max-content;
+  text-align: left;
+  border: 0.2rem solid #ccc;
+  padding: 2rem 3rem;
+}
+.list h4 {
+  text-align: center;
+}
+#main .list li {
+  margin: 0.5rem 0;
+}
+#main .list li::before {
+  content: "#";
+}
+#main .content {
+  font-size: 2.5rem;
+  margin-bottom: 5%;
+}
+#main .list li {
+  color: var(--main-bg);
+}
+.list li a {
+  color: var(--main-bg);
+  border-bottom: 2px solid;
+}
+#main .list li:hover a {
+  color: #00b894;
+}
+.section .caption {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 1.5rem 0;
+}
+.section .caption::before {
+  content: "#";
+}
+.section p {
+  text-align: justify;
+  margin: 4rem 0;
+  text-indent: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+}
+.section .textbox {
+  background: #ddd;
+  padding: 1.5rem 2.5rem;
+  border-radius: 1rem;
+}
+.section .textbox pre {
+  font-family: "Lexend Deca";
+  font-weight: normal;
+  font-size: 2rem;
+}
+.section .img {
+  padding: 3rem 0;
+  background: #eee;
+  width: 100%;
+  height: 70vh;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+.img img {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section .end {
+  margin: 2rem 0;
+  font-style: italic;
+  text-align: center;
+  color: #888;
+}
+.section em {
+  font-style: normal;
+  color: #0984e3;
+  background: #eee;
+  padding: 0 4px;
+}
+.section .html-text {
+  width: 100%;
+  padding: 1rem 3rem;
+  background: #011627;
+  overflow: auto;
+  border-radius: 1rem;
+}
+.section strong {
+  text-decoration: underline;
+}
+.section .example {
+  margin: 3rem 0;
+  width: 100%;
+  height: 60vh;
+  background: #636e72;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.section > ul > li {
+  margin-left: 5%;
+}
+.section > ul > ul > li {
+  list-style: square;
+  margin-left: 10%;
+}
+@media screen and (max-width: 1024px) {
+  #main {
+    width: 80%;
+  }
+  .menu-btn {
+    left: 3%;
+  }
+  #top-btn {
+    right: 3%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #main {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .menu-btn {
+    display: none;
+  }
+  #top-btn {
+    display: none;
+  }
+  .bg {
+    height: 80vh;
+  }
+  #main .title-image {
+    height: 40vh;
+  }
+  #main::after {
+    height: 40vh;
+  }
+  .img img {
+    height: 70%;
+  }
+}

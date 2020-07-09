@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/prototype/CSS/template.css">
+    <link rel="stylesheet" href="/prototype/CSS/blog.css" />
+    <link rel="stylesheet" href="/prototype/responsive/responsive.css">
+    <link rel="stylesheet" href="style.css" />
+    <script src="/JQuery/jquery-3.4.1.min.js"></script>
+    <script src="/prototype/JS/template.js"></script>
+    <title>Visual Animation - CSS Position</title>
+  </head>
+  <body>
+    <!-- loader -->
+    <div class="loader-container" id="loader">
+      <div class="loader">
+        <h3>Loading...</h3>
+      </div>
+    </div>
+    <!-- float button -->
+    <a id="top-btn" class="top-btn-box" href="#" title="top">
+      <div class="top-btn">></div>
+    </a>
+
+    <a class="menu-btn" href="#menu" title="Mục Lục">
+      <img src="/icon/menu.png" alt=":((" />
+    </a>
+    <!-- header -->
+    <div class="overlay-menu" id="overlay-menu">
+      <img src="/icon/menu.png" alt=":((" class="close-btn" id="close-btn" />
+      <ul class="nav-in-btn">
+        <li><a href="/index.html" id="home-menu">Home</a></li>
+        <li>
+          <a href="/main/Basic/index.html" id="basic-menu" class="active"
+            >Basic</a
+          >
+        </li>
+        <li>
+          <a href="/main/Advanced/index.html" id="advanced-menu">Advanced</a>
+        </li>
+        <li>
+          <a href="/main/About us/index.html" id="about-menu">About Us</a>
+        </li>
+      </ul>
+    </div>
+
+    <header>
+      <div class="logo-box">
+        <div class="logo" id="logo">Visual Animation</div>
+      </div>
+      <ul class="nav-box">
+        <li><a href="/index.html" id="home">Home</a></li>
+        <li>
+          <a href="/main/Basic/index.html" id="Basic" class="active">Basic</a>
+        </li>
+        <li><a href="/main/Advanced/index.html" id="advanced">Advanced</a></li>
+        <li><a href="/main/About us/index.html" id="about-us">About Us</a></li>
+      </ul>
+      <img src="/icon/menu-black.png" alt=":((" id="open-btn" />
+    </header>
+    <!-- main background -->
+    <div class="bg" id="bg">
+      <div class="caption">
+        <h2>Position trong CSS</h2>
+      </div>
+    </div>
+
+    <div id="main" class="main-container">
+      <!-- document background -->
+      <div class="title-image" id="position">
+        <p>absolute</p>
+        <p>vs</p>
+        <p>relative</p>
+      </div>
+      <!-- document category -->
+      <ul class="list" id="menu">
+        <h4>Nội dung</h4>
+        <li><a href="#cap1">Mở đầu</a></li>
+        <li><a href="#cap2">Giá trị của Position</a></li>
+        <li><a href="#cap3">Thuộc tính đi chung với Position</a></li>
+        <li><a href="#cap4">Absolute</a></li>
+        <li><a href="#cap5">Relative</a></li>
+        <li><a href="#cap6">Kết</a></li>
+      </ul>
+      <!-- content -->
+      <div class="content">
+        <div class="section">
+          <h4 class="caption" id="cap1">Mở đầu</h4>
+          <p>
+            Chắc hẳn khi các bạn layout trang web hay tạo một menu thì việc sử
+            dụng thuộc tính <em>position</em> hẳn đã không còn xa lạ gì với
+            chúng ta.
+          </p>
+          <p>
+            Hôm nay chúng ta cùng tìm hiểu thuộc tính <em>Position</em> hoạt
+            động như thế nào nha.
+          </p>
+          <h4 class="caption" id="cap2">Giá trị của Position</h4>
+          <p>
+            Thuộc tính này chỉ có vài giá trị cũng khá là dễ nhớ:
+          </p>
+          <ul>
+            <li>
+              <p>
+                <strong>relative</strong>: Giá trị này thiết lập vị trí của phần
+                tử mà không gây ảnh hưởng đến các phần tử khác.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>absolute</strong>: Giá trị này thiết lập vị trí của phần
+                tử dựa vào phần tử cha của nó nếu cha của nó đã định position
+                <em>relative</em> hoặc <em>absolute</em>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>fixed</strong>: Giá trị này thiết lập vị trí của phần tử
+                cố định trên màn hình dù bạn có scroll trình duyệt.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>static</strong>: Đây là giá trị mặc định của
+                <em>position</em>.
+              </p>
+            </li>
+          </ul>
+          <h4 class="caption" id="cap3">Thuộc tính đi chung với Position</h4>
+          <p>Những thuộc tính đi chung với <em>Position</em>:</p>
+          <ul>
+            <li>
+              <p>
+                <strong>top</strong>: Căn chỉnh tử phần tử từ trên xuống dưới
+                nếu giá trị > 0 còn < 0 thì phần tử sẽ đi ngược lại.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>bottom</strong>: Căn chỉnh tử phần tử từ dưới lên trên
+                nếu giá trị > 0 còn < 0 thì phần tử sẽ đi ngược lại.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>left</strong>: Căn chỉnh tử phần tử từ trái sang phải
+                nếu giá trị > 0 còn < 0 thì phần tử sẽ đi ngược lại.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>right</strong>: Căn chỉnh tử phần tử từ phải qua trái
+                nếu giá trị > 0 còn < 0 thì phần tử sẽ đi ngược lại.
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <p>Một vài lưu ý khi sử dụng các thuộc tính đi kèm:</p>
+            <li>
+              <p>
+                Khi cả <em>left</em> và <em>right</em> bằng 0, đã có
+                <em>height</em> mà thuộc tính <em>width</em> chưa định thì phần
+                tử sẽ có <em>width</em> là <strong>100%</strong>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Tương tự <em>bottom</em> và <em>top</em> bằng 0, đã có
+                <em>width</em> mà thuộc tính <em>height</em> chưa định thì phần
+                tử sẽ có <em>height</em> là <strong>100%</strong>.
+              </p>
+            </li>
+          </ul>
+          <p>
+            Khá là khó hiểu nhỉ. Đừng lo, coi xong ví dụ các bạn sẽ hiểu ngay.
+            Mình chỉ giải thích hai thuộc tính <em>absolute</em> và
+            <em>relative</em>, còn <em>fixed</em> thì khá đơn giản các bạn có
+            thể tự tìm hiểu.
+          </p>
+          <h4 class="caption" id="cap4">Absolute</h4>
+          <p>
+            Đầu tiên, mình sẽ giải thích bốn thuộc tính <em>top</em>,
+            <em>bottom</em>, <em>left</em>, <em>right</em>.
+          </p>
+          <div class="example example1">
+            <div class="top-left box">
+              <p>top: 0</p>
+              <p>left: 0</p>
+            </div>
+            <div class="top-right box">
+              <p>top: 0</p>
+              <p>right: 0</p>
+            </div>
+            <div class="bottom-left box">
+              <p>bottom: 0</p>
+              <p>left: 0</p>
+            </div>
+            <div class="bottom-right box">
+              <p>bottom: 0</p>
+              <p>right: 0</p>
+            </div>
+          </div>
+          <ul>
+            <li>
+              <p>
+                <em>top: 0, left: 0</em> Phần tử sẽ nằm ở bên trên trái cùng.
+              </p>
+            </li>
+            <li>
+              <p>
+                <em>top: 0, right: 0</em> Phần tử sẽ nằm ở bên trên phải cùng.
+              </p>
+            </li>
+            <li>
+              <p>
+                <em>bottom: 0, left: 0</em> Phần tử sẽ nằm ở bên dưới trái cùng.
+              </p>
+            </li>
+            <li>
+              <p>
+                <em>bottom: 0, right: 0</em> Phần tử sẽ nằm ở bên dưới phải
+                cùng.
+              </p>
+            </li>
+          </ul>
+          <p>
+            Các bạn xem tiếp ví dụ này nhé.
+          </p>
+          <p>
+            Chúng ta có một đoạn HTML sau
+          </p>
+          <div class="html-text">
+            <img src="/main/Basic/position/ex1.png" alt=":((" />
+          </div>
+          <p>
+            Và Style như sau
+          </p>
+          <div class="textbox">
+            <pre>
+.container {
+  width : 500px;  
+  height : 400px;
+  background: black;
+}
+.item {
+  position: absolute;
+  width : 100px;  
+  height : 100px;
+  background: red;
+}</pre
+            >
+          </div>
+          <p>
+            Tada!! Ta sẽ được kết quả như sau:
+          </p>
+          <div class="example example2">
+            <div class="container-ex">
+              <div class="item"></div>
+            </div>
+          </div>
+          <p>
+            Sau đó chúng ta thử thêm <em>bottom: 0</em> và <em>left: 0</em>
+            vào để xem kết quả ra sao nhé.
+          </p>
+          <div class="example example3">
+            <div class="container-ex">
+              <div class="item"></div>
+            </div>
+          </div>
+          <p>
+            Các bạn có thấy nó sai cái gì không? Đúng ra nó phải nằm ở góc dưới
+            bên trái của <em>.container</em> chứ nhỉ, sao nó lại nằm ở ngoài
+            <em>body</em>.
+          </p>
+          <p>
+            Chúng ta không sai mà là thiếu không định <em>position</em> cho phần
+            tử cha của <em>.item</em>. Chỉ cần thêm
+            <em>position: relative</em> là ok thôi.
+          </p>
+          <h4 class="caption" id="cap5">Relative</h4>
+          <div class="example example4">
+            <div class="box origin">origin</div>
+            <div class="box top">top: 100px</div>
+            <div class="box left">left: 100px</div>
+            <div class="box right">right: 100px</div>
+            <div class="box bottom">bottom: 100px</div>
+          </div>
+          <ul>
+            <li>
+              <p>
+                <em>origin:</em> Đây là phần tử ban đầu các giá trị của
+                <em>top, bottom, left, right </em>
+                đều mang giá trị 0.
+              </p>
+            </li>
+            <li>
+              <p>
+                <em>top: 100px</em> Phần tử sẽ cách phần tử
+                <strong>origin</strong>
+                100px về phía bên trên.
+              </p>
+            </li>
+            <li>
+              <p>
+                <em>bottom: 100px</em> Phần tử sẽ cách phần tử
+                <strong>origin</strong>
+                100px về phía bên dưới.
+              </p>
+            </li>
+            <li>
+              <p>
+                <em>left: 100px</em> Phần tử sẽ cách phần tử
+                <strong>origin</strong>
+                100px về phía bên trái.
+              </p>
+            </li>
+            <li>
+              <p>
+                <em>right: 100px</em> Phần tử sẽ cách phần tử
+                <strong>origin</strong>
+                100px về phía bên phải.
+              </p>
+            </li>
+          </ul>
+          <p>
+            <strong>
+              <u>Note:</u> nếu chỉ định <em>position: relative</em> thì phần tử
+              đó sẽ đứng yên tại chỗ.
+            </strong>
+          </p>
+          <h4 class="caption" id="cap6">Kết</h4>
+          <p>
+            Bài học về <em>position</em> đến đây là hết rồi, tuy những kiến thức
+            này chỉ là cơ bản nhưng nó giúp ích cho việc layout
+            <strong>Website</strong> rất nhiều nên các bạn cố gắng nắm vững nhé.
+          </p>
+          <p class="end">-----The End-----</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="item">
+        <p class="logo">Visual Animation</p>
+      </div>
+      <div class="item">
+        <p>Template by: <a href="https://evondev.com/">Evondev</a></p>
+      </div>
+      <div class="item">
+        <p>Coded by: Tris Tran</p>
+      </div>
+      <div class="item">
+        <p>@Copyright Visual Animation</p>
+        <div>
+          Icons by
+          <a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>
+        </div>
+        <div>
+          Image by:
+          <a href="https://www.freepik.com/free-photos-vectors/background"
+            >Freepik
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
